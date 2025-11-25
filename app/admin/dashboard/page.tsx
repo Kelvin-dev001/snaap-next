@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Grid from "@mui/material/Grid"; // ← preferred, for tree-shaking and guaranteed correct type
 import {
   Box,
-  Grid,
   Typography,
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
   ShoppingCart,
   People,
   LocalShipping,
-  MonetizationOn,
+  MonetizationOn
 } from "@mui/icons-material";
 import { BarChart, PieChart } from "@mui/x-charts";
 import ErrorAlert from "../../../components/ErrorAlert";
