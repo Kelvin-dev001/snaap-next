@@ -1,11 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import {
-  Box, Grid, Typography, Card, CardContent,
-  CircularProgress, useTheme, useMediaQuery
+  Box,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CircularProgress,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import {
-  ShoppingCart, People, LocalShipping, MonetizationOn
+  ShoppingCart,
+  People,
+  LocalShipping,
+  MonetizationOn,
 } from "@mui/icons-material";
 import { BarChart, PieChart } from "@mui/x-charts";
 import ErrorAlert from "../../../components/ErrorAlert";
@@ -141,18 +150,20 @@ export default function Page() {
               <Box sx={{ height: 300 }}>
                 <BarChart
                   dataset={salesData}
-                  xAxis={[{
-                    dataKey: "month",
-                    scaleType: "band",
-                    label: "Month"
-                  }]}
+                  xAxis={[
+                    {
+                      dataKey: "month",
+                      scaleType: "band",
+                      label: "Month",
+                    },
+                  ]}
                   series={[
                     {
                       dataKey: "total",
                       label: "Total Sales (KES)",
                       valueFormatter: (value) => `KES ${value.toLocaleString()}`,
-                      color: theme.palette.primary.main
-                    }
+                      color: theme.palette.primary.main,
+                    },
                   ]}
                 />
               </Box>
@@ -168,17 +179,19 @@ export default function Page() {
               <Box sx={{ height: 300 }}>
                 {Array.isArray(productDistribution) && productDistribution.length > 0 ? (
                   <PieChart
-                    series={[{
-                      data: productDistribution.map(item => ({
-                        id: item._id,
-                        value: item.count,
-                        label: item._id
-                      })),
-                      innerRadius: 30,
-                      outerRadius: 100,
-                      paddingAngle: 5,
-                      cornerRadius: 5,
-                    }]}
+                    series={[
+                      {
+                        data: productDistribution.map((item) => ({
+                          id: item._id,
+                          value: item.count,
+                          label: item._id,
+                        })),
+                        innerRadius: 30,
+                        outerRadius: 100,
+                        paddingAngle: 5,
+                        cornerRadius: 5,
+                      },
+                    ]}
                   />
                 ) : (
                   <Typography>No product distribution data</Typography>
@@ -207,11 +220,14 @@ export default function Page() {
                   </tr>
                 </thead>
                 <tbody>
-                  {recentOrders.map(order => (
-                    <tr key={order._id} style={{
-                      borderBottom: `1px solid ${theme.palette.grey[200]}`,
-                      "&:last-child": { borderBottom: "none" }
-                    }}>
+                  {recentOrders.map((order) => (
+                    <tr
+                      key={order._id}
+                      style={{
+                        borderBottom: `1px solid ${theme.palette.grey[200]}`,
+                        // Remove "&:last-child" here – not needed in inline style
+                      }}
+                    >
                       <td style={{ padding: "12px 16px" }}>
                         <Typography variant="body2" sx={{ fontWeight: 500 }}>
                           #{order.orderNumber}
@@ -233,20 +249,30 @@ export default function Page() {
                         </Typography>
                       </td>
                       <td style={{ padding: "12px 16px" }}>
-                        <Box sx={{
-                          display: "inline-block",
-                          px: 1.5,
-                          py: 0.5,
-                          borderRadius: 1,
-                          bgcolor:
-                            order.status === "completed" ? "success.light" :
-                              order.status === "pending" ? "warning.light" :
-                                order.status === "cancelled" ? "error.light" : "grey.100",
-                          color:
-                            order.status === "completed" ? "success.dark" :
-                              order.status === "pending" ? "warning.dark" :
-                                order.status === "cancelled" ? "error.dark" : "grey.800"
-                        }}>
+                        <Box
+                          sx={{
+                            display: "inline-block",
+                            px: 1.5,
+                            py: 0.5,
+                            borderRadius: 1,
+                            bgcolor:
+                              order.status === "completed"
+                                ? "success.light"
+                                : order.status === "pending"
+                                  ? "warning.light"
+                                  : order.status === "cancelled"
+                                    ? "error.light"
+                                    : "grey.100",
+                            color:
+                              order.status === "completed"
+                                ? "success.dark"
+                                : order.status === "pending"
+                                  ? "warning.dark"
+                                  : order.status === "cancelled"
+                                    ? "error.dark"
+                                    : "grey.800",
+                          }}
+                        >
                           <Typography variant="body2" sx={{ textTransform: "capitalize" }}>
                             {order.status}
                           </Typography>
