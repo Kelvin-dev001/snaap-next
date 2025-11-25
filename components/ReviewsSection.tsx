@@ -1,5 +1,6 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 import ReviewFilter from "./ReviewFilter";
 import ReviewCard from "./ReviewCard";
 import {

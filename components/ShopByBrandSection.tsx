@@ -1,7 +1,8 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Card, CardActionArea, Avatar } from "@mui/material";
 // import { Link } from "react-router-dom";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 import Marquee from "react-fast-marquee";
 
 const CARD_HEIGHT = 180;

@@ -1,7 +1,8 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import NextLink from "next/link";
 import { Box, Typography, Card, CardActionArea } from "@mui/material";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 
 const CARD_HEIGHT = 200;
 const CARD_WIDTH = 150;

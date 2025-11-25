@@ -16,7 +16,7 @@ import {
   Divider,
 } from "@mui/material";
 import { Tune, Close } from "@mui/icons-material";
-import API from "../../utils/apiService";
+import API from "@/utils/api";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import ErrorAlert from "../../components/ErrorAlert";
 import AutoCompleteSearch from "../../components/AutoCompleteSearch";
