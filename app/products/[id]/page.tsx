@@ -12,7 +12,7 @@ import {
 } from "@mui/icons-material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import API from "../../../utils/apiService";
+import API from "@/utils/api";
 import LoadingSpinner from "../../../components/LoadingSpinner";
 import ErrorAlert from "../../../components/ErrorAlert";
 import ReviewSection from "../../../components/ReviewsSection";

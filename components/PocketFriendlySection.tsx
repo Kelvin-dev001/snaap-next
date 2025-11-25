@@ -1,7 +1,8 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import Slider from "react-slick";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 import ProductCard from "./ProductCard";
 
 type Product = {

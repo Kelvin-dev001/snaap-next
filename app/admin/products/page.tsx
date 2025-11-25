@@ -15,7 +15,7 @@ import {
   Visibility, Category, Inventory
 } from "@mui/icons-material";
 import ErrorAlert from "../../../components/ErrorAlert";
-import API from "../../../utils/apiService";
+import API from "@/utils/api";
 
 const MAX_IMAGES = 10;
 

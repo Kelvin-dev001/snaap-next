@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Box, Container, CircularProgress, Typography } from "@mui/material";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 
 // Section Components
 import HeroBannerSlider from "../components/HeroBannerSlider";

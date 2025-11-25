@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import {
   AppBar, Toolbar, Typography, Button, Box, IconButton, Avatar,
@@ -14,7 +15,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { SiBrandfolder } from "react-icons/si";
 // import { useNavigate } from "react-router-dom"; // Not needed for Next.js
 import AutoCompleteSearch from "./AutoCompleteSearch";
-import API from "../utils/apiService";
+import API from "@/utils/api";
 
 type MenuSection = {
   label: string;

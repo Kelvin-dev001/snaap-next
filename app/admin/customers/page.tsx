@@ -13,7 +13,7 @@ import {
 } from "@mui/icons-material";
 import { format } from "date-fns";
 import ErrorAlert from "../../../components/ErrorAlert";
-import API from "../../../utils/apiService";
+import API from "@/utils/api";
 
 export default function Page() {
   const theme = useTheme();

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useMemo } from "react";
 import useProducts from "../hooks/useProducts";
 import Fuse from "fuse.js";
