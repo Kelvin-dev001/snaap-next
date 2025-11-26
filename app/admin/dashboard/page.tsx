@@ -16,7 +16,6 @@ import {
   LocalShipping,
   MonetizationOn
 } from "@mui/icons-material";
-import { BarChart, PieChart } from "@mui/x-charts";
 import ErrorAlert from "../../../components/ErrorAlert";
 import AdminReviewsTable from "../../../components/admin/AdminReviewsTable";
 // import API from "../../../utils/apiService"; // Uncomment for real API
