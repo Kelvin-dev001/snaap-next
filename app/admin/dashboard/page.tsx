@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Grid } from "@mui/material/Grid";
+import { Grid } from "@mui/material";
 import {
   Box,
   Typography,
