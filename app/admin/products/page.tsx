@@ -223,7 +223,9 @@ export default function Page() {
 
     if (currentProduct.specs) {
       Object.entries(currentProduct.specs).forEach(([key, val]) => {
-        if (val) formData.append(`specs[${key}]`, val);
+        if (val !== undefined && val !== null && typeof val !== 'object') {
+          formData.append(`specs[${key}]`, String(val));
+        }
       });
     }
 
